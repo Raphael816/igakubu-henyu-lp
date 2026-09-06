@@ -1,5 +1,6 @@
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { Achievements } from './components/Achievements'
 import { PainPoints } from './components/PainPoints'
 import { Services } from './components/Services'
 import { Mentor } from './components/Mentor'
@@ -13,6 +14,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <Achievements />
       <PainPoints />
       <Services />
       <Mentor />

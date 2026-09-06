@@ -1,21 +1,16 @@
-# 医学部学士編入サポート LP
+# React + Vite
 
-React + Vite + framer-motion 製のランディングページ。無料相談への申し込みを取ることが目的で、決済機能は含みません。
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-公開URL: https://fbear0128.github.io/igakubu-henyu-lp/
+Currently, two official plugins are available:
 
-## 開発
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-```bash
-npm install
-npm run dev
-```
+## React Compiler
 
-## 公開前TODO
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- `src/constants.js` の `CONSULT_URL`: 実際の無料相談予約先(Googleフォーム/Calendlyなど)に差し替える
-- `src/components/PainPoints.jsx`: X(旧Twitter)でのヒアリングで集めた生の悩みの声に差し替える
-- `src/components/Mentor.jsx`: 監修者の実名・写真の公開可否を本人に確認のうえ差し替える
-- `src/components/FAQ.jsx`: 実際によく聞かれる質問に差し替える
+## Expanding the Oxlint configuration
 
-`main` ブランチへのpushで GitHub Actions が自動ビルド・デプロイします。
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.

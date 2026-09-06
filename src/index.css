@@ -48,6 +48,31 @@ header.site-header .wrap {
   cursor: pointer;
 }
 .btn-header { padding: 9px 20px; font-size: 0.85rem; }
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+}
+.btn-line {
+  background: #06c755;
+  color: #fff;
+}
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.achievements { padding: 40px 0; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.stat-value { font-size: 1.7rem; font-weight: 700; color: var(--navy); }
+.stat-label { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
 
 .hero {
   background: linear-gradient(180deg, #fff, var(--bg));
@@ -229,6 +254,7 @@ p.section-lede {
 .cta-final h2 { color: #fff; margin: 0 0 14px; }
 .cta-final p { color: #cfd6e6; margin: 0 0 28px; }
 .cta-final .btn { background: var(--gold); color: var(--navy); }
+.cta-final .btn-line { background: #06c755; color: #fff; }
 
 footer {
   padding: 40px 0 60px;
