@@ -1,16 +1,23 @@
-# React + Vite
+# MEDTHOD SCHOOL LP
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + Vite + framer-motion 製のランディングページ。無料相談への申し込みを取ることが目的で、決済機能は含みません。
 
-Currently, two official plugins are available:
+公開URL: https://fbear0128.github.io/igakubu-henyu-lp/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 開発
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 公開前TODO
 
-## Expanding the Oxlint configuration
+- `src/constants.js` の `CONSULT_URL`: 実際の無料相談予約先(Googleフォーム/Calendlyなど)に差し替える
+- `src/constants.js` の `LINE_URL`: LINE公式アカウントを作成したら、そのURLに差し替える
+- `src/components/PainPoints.jsx`: X(旧Twitter)でのヒアリングで集めた生の悩みの声に差し替える
+- `src/components/Mentor.jsx`: 監修者の実名・写真の公開可否を本人に確認のうえ差し替える
+- `src/components/FAQ.jsx`: 実際によく聞かれる質問に差し替える
+- `src/components/Achievements.jsx`: モニター期間終了後、実際の合格実績が出たら差し替える
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+`main` ブランチへのpushで GitHub Actions が自動ビルド・デプロイします。

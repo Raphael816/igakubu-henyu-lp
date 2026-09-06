@@ -6,7 +6,7 @@ export function Header() {
     <header className="site-header">
       <div className="wrap">
         <div className="logo">
-          医学部編入<span>サポート</span>
+          MEDTHOD <span>SCHOOL</span>
         </div>
         <motion.a
           className="btn btn-header"
