@@ -8,6 +8,12 @@ export function Header() {
         <div className="logo">
           MEDTHOD <span>SCHOOL</span>
         </div>
+        <nav className="site-nav">
+          <a href="#services">サービス内容</a>
+          <a href="#mentor">監修者紹介</a>
+          <a href="#pricing">料金</a>
+          <a href="#faq">よくある質問</a>
+        </nav>
         <motion.a
           className="btn btn-header"
           href={CONSULT_URL}

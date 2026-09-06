@@ -2,8 +2,11 @@ import { Reveal } from './Reveal'
 
 export function Mentor() {
   return (
-    <section className="alt">
+    <section id="mentor" className="alt">
       <div className="wrap">
+        <Reveal as="span" className="eyebrow-label">
+          SUPERVISOR
+        </Reveal>
         <Reveal as="h2" className="section-title">
           監修者紹介
         </Reveal>

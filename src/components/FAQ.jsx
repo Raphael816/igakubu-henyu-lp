@@ -50,8 +50,11 @@ function FaqItem({ q, a }) {
 
 export function FAQ() {
   return (
-    <section className="alt">
+    <section id="faq" className="alt">
       <div className="wrap">
+        <Reveal as="span" className="eyebrow-label">
+          FAQ
+        </Reveal>
         <Reveal as="h2" className="section-title">
           よくある質問
         </Reveal>

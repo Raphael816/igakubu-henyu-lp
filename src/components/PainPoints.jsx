@@ -13,6 +13,9 @@ export function PainPoints() {
   return (
     <section className="alt">
       <div className="wrap">
+        <Reveal as="span" className="eyebrow-label">
+          CONCERNS
+        </Reveal>
         <Reveal as="h2" className="section-title">
           こんなお悩み、ありませんか？
         </Reveal>

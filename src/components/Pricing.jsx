@@ -2,8 +2,11 @@ import { Reveal } from './Reveal'
 
 export function Pricing() {
   return (
-    <section>
+    <section id="pricing">
       <div className="wrap">
+        <Reveal as="span" className="eyebrow-label">
+          PRICING
+        </Reveal>
         <Reveal as="h2" className="section-title">
           料金について
         </Reveal>

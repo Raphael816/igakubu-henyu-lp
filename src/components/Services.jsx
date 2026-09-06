@@ -18,8 +18,11 @@ const PILLARS = [
 
 export function Services() {
   return (
-    <section>
+    <section id="services">
       <div className="wrap">
+        <Reveal as="span" className="eyebrow-label">
+          OUR APPROACH
+        </Reveal>
         <Reveal as="h2" className="section-title">
           サービス内容
         </Reveal>
