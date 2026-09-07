@@ -15,8 +15,6 @@ npm run dev
 
 ## 公開前TODO
 
-- `src/constants.js` の `CONSULT_URL`: 実際の無料相談予約先(Googleフォーム/Calendlyなど)に差し替える
-- `src/constants.js` の `LINE_URL`: LINE公式アカウントを作成したら、そのURLに差し替える
 - `src/components/PainPoints.jsx`: X(旧Twitter)でのヒアリングで集めた生の悩みの声に差し替える
 - `src/components/Mentor.jsx`: 監修者の実名・写真の公開可否を本人に確認のうえ差し替える
 - `src/components/FAQ.jsx`: 実際によく聞かれる質問に差し替える

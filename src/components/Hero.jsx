@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { CONSULT_URL, LINE_URL } from '../constants'
+import { LINE_URL } from '../constants'
 
 export function Hero() {
   return (
@@ -33,26 +33,17 @@ export function Hero() {
           オンライン完結・個別対応で、あなたの学習を伴走します。
         </motion.p>
         <motion.div
-          className="btn-group"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <motion.a
-            className="btn"
-            href={CONSULT_URL}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.96 }}
-          >
-            無料相談を予約する
-          </motion.a>
           <motion.a
             className="btn btn-line"
             href={LINE_URL}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
           >
-            LINEで相談する
+            LINEで無料相談する
           </motion.a>
         </motion.div>
       </div>

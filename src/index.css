@@ -93,21 +93,9 @@ header.site-header .wrap {
   .logo { font-size: 0.95rem; }
   .btn-header { padding: 8px 14px; font-size: 0.72rem; }
 }
-.btn-outline {
-  background: transparent;
-  color: var(--navy);
-  border: 1.5px solid var(--navy);
-  box-shadow: none;
-}
 .btn-line {
   background: #06c755;
   color: #fff;
-}
-.btn-group {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 /* ---------- Achievements ---------- */
@@ -381,7 +369,6 @@ p.section-lede {
 }
 .cta-final h2 { font-family: var(--heading-font); color: #fff; margin: 0 0 16px; font-size: clamp(1.5rem, 3vw, 1.9rem); }
 .cta-final p { color: #cfd6e6; margin: 0 0 32px; }
-.cta-final .btn { background: var(--gold); color: var(--navy); }
 .cta-final .btn-line { background: #06c755; color: #fff; }
 
 /* ---------- Footer ---------- */

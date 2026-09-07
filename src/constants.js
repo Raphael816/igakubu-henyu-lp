@@ -1,4 +1,2 @@
-// TODO: 実際の無料相談予約先(Googleフォーム/Calendlyなど)のURLに差し替える
-export const CONSULT_URL = '#'
-
+// 無料相談から支払い(銀行振込)まで、すべてLINE公式アカウントで担当者とやり取りする運用
 export const LINE_URL = 'https://lin.ee/82Nv7k3'

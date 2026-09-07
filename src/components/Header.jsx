@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { CONSULT_URL } from '../constants'
+import { LINE_URL } from '../constants'
 
 export function Header() {
   return (
@@ -15,12 +15,12 @@ export function Header() {
           <a href="#faq">よくある質問</a>
         </nav>
         <motion.a
-          className="btn btn-header"
-          href={CONSULT_URL}
+          className="btn btn-line btn-header"
+          href={LINE_URL}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.96 }}
         >
-          無料相談を予約する
+          LINEで無料相談する
         </motion.a>
       </div>
     </header>
