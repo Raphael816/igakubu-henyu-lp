@@ -3,6 +3,7 @@ import { Hero } from './components/Hero'
 import { Achievements } from './components/Achievements'
 import { PainPoints } from './components/PainPoints'
 import { Services } from './components/Services'
+import { Features } from './components/Features'
 import { Mentor } from './components/Mentor'
 import { Pricing } from './components/Pricing'
 import { FAQ } from './components/FAQ'
@@ -17,6 +18,7 @@ function App() {
       <Achievements />
       <PainPoints />
       <Services />
+      <Features />
       <Mentor />
       <Pricing />
       <FAQ />

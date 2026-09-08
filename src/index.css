@@ -258,6 +258,18 @@ p.section-lede {
 .pillar .icon3d-spacer { height: 56px; margin-bottom: 16px; }
 .pillar h3 { font-family: var(--heading-font); margin: 0 0 12px; color: var(--navy); font-size: 1.15rem; font-weight: 700; }
 .pillar p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+.feature-badge {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  background: rgba(201, 161, 90, 0.14);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
 
 /* ---------- Mentor ---------- */
 .mentor {

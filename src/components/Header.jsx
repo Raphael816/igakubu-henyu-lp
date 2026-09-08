@@ -10,6 +10,7 @@ export function Header() {
         </div>
         <nav className="site-nav">
           <a href="#services">サービス内容</a>
+          <a href="#features">機能</a>
           <a href="#mentor">監修者紹介</a>
           <a href="#pricing">料金</a>
           <a href="#faq">よくある質問</a>
