@@ -18,6 +18,6 @@ npm run dev
 - `src/components/PainPoints.jsx`: X(旧Twitter)でのヒアリングで集めた生の悩みの声に差し替える
 - `src/components/Mentor.jsx`: 監修者の実名・写真の公開可否を本人に確認のうえ差し替える
 - `src/components/FAQ.jsx`: 実際によく聞かれる質問に差し替える
-- `src/components/Achievements.jsx`: モニター期間終了後、実際の合格実績が出たら差し替える
+- `src/components/Achievements.jsx`: 卒業生の合格実績が出たら、実績ベースの数値に差し替える
 
 `main` ブランチへのpushで GitHub Actions が自動ビルド・デプロイします。

@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion'
 import { LINE_URL } from '../constants'
+import { Scene3D } from './Scene3D'
 
 export function Hero() {
   return (
     <section className="hero">
+      <Scene3D />
+      <div className="hero-glow" />
       <div className="wrap">
         <motion.div
           className="eyebrow"

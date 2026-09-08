@@ -145,6 +145,23 @@ header.site-header .wrap {
   background: radial-gradient(circle, rgba(20,33,61,0.10), transparent 70%);
 }
 .hero .wrap { position: relative; z-index: 1; }
+.scene3d {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.scene3d canvas { display: block; width: 100% !important; height: 100% !important; }
+@media (max-width: 720px) {
+  .scene3d { opacity: 0.6; }
+}
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 62% 60% at 50% 46%, var(--bg) 0%, rgba(251, 250, 247, 0.88) 45%, rgba(251, 250, 247, 0) 78%);
+}
 .hero .eyebrow {
   display: inline-block;
   color: var(--navy);
