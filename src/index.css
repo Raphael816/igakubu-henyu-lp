@@ -254,18 +254,7 @@ p.section-lede {
   padding: 36px 28px;
   box-shadow: var(--shadow-sm);
 }
-.pillar .num {
-  display: inline-flex;
-  align-items: center; justify-content: center;
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--gold-light);
-  font-family: var(--heading-font);
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 20px;
-}
+.pillar .icon3d { margin-bottom: 16px; margin-left: -6px; }
 .pillar h3 { font-family: var(--heading-font); margin: 0 0 12px; color: var(--navy); font-size: 1.15rem; font-weight: 700; }
 .pillar p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
 
@@ -375,6 +364,8 @@ p.section-lede {
 
 /* ---------- Final CTA ---------- */
 .cta-final {
+  position: relative;
+  overflow: hidden;
   text-align: center;
   background: linear-gradient(160deg, var(--navy), var(--navy-deep));
   color: #fff;
@@ -384,6 +375,8 @@ p.section-lede {
   max-width: 780px;
   box-shadow: var(--shadow-lg);
 }
+.cta-final .scene3d { opacity: 0.7; }
+.cta-final-content { position: relative; z-index: 1; }
 .cta-final h2 { font-family: var(--heading-font); color: #fff; margin: 0 0 16px; font-size: clamp(1.5rem, 3vw, 1.9rem); }
 .cta-final p { color: #cfd6e6; margin: 0 0 32px; }
 .cta-final .btn-line { background: #06c755; color: #fff; }

@@ -1,16 +1,21 @@
 import { motion } from 'framer-motion'
+import { Icon3D } from './Icon3D'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
+import { Tilt } from './Tilt'
 
 const PILLARS = [
   {
+    shape: 'icosahedron',
     title: '合格者監修のカリキュラム',
     body: '合格者の実体験に基づいた、遠回りしない学習設計。毎週の演習結果をもとに、次の一週間の優先順位を明確にします。',
   },
   {
+    shape: 'octahedron',
     title: 'AIを活用した個別最適化',
     body: '週次の演習結果をAIが分析し、翌週の学習プラン案を自動生成。内容は必ず監修者が確認・調整してからお届けします。',
   },
   {
+    shape: 'tetrahedron',
     title: '個別相談・伴走',
     body: '一人で抱え込ませない、定期的な壁打ちの機会をご用意。学習の進め方や不安なことをいつでも相談いただけます。',
   },
@@ -36,18 +41,12 @@ export function Services() {
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {PILLARS.map((pillar, i) => (
-            <motion.div
-              className="pillar"
-              key={pillar.title}
-              variants={staggerItem}
-              whileHover={{ y: -4 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            >
-              <div className="num">{i + 1}</div>
+          {PILLARS.map((pillar) => (
+            <Tilt className="pillar" key={pillar.title} variants={staggerItem}>
+              <Icon3D shape={pillar.shape} />
               <h3>{pillar.title}</h3>
               <p>{pillar.body}</p>
-            </motion.div>
+            </Tilt>
           ))}
         </motion.div>
       </div>

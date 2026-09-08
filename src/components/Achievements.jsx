@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { Reveal, staggerContainer, staggerItem } from './Reveal'
+import { staggerContainer, staggerItem } from './Reveal'
+import { Tilt } from './Tilt'
 
 // まだ実績数値(合格者数など)が出ていないサービスなので、事実として言えることだけを載せる。
 // TODO: 卒業生の合格実績が出たら、このセクションを実績ベースの数値に差し替える
@@ -21,10 +22,10 @@ export function Achievements() {
           viewport={{ once: true, margin: '-80px' }}
         >
           {STATS.map((stat) => (
-            <motion.div className="stat" key={stat.label} variants={staggerItem}>
+            <Tilt className="stat" key={stat.label} variants={staggerItem}>
               <div className="stat-value">{stat.value}</div>
               <div className="stat-label">{stat.label}</div>
-            </motion.div>
+            </Tilt>
           ))}
         </motion.div>
       </div>

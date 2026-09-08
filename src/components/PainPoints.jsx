@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
+import { Tilt } from './Tilt'
 
 const PAINS = [
   '何から手をつければいいか分からない',
@@ -30,9 +31,9 @@ export function PainPoints() {
           viewport={{ once: true, margin: '-80px' }}
         >
           {PAINS.map((pain) => (
-            <motion.li key={pain} variants={staggerItem}>
+            <Tilt as="li" key={pain} variants={staggerItem}>
               {pain}
-            </motion.li>
+            </Tilt>
           ))}
         </motion.ul>
         <p style={{ textAlign: 'center', marginTop: 20 }}>
