@@ -255,6 +255,7 @@ p.section-lede {
   box-shadow: var(--shadow-sm);
 }
 .pillar .icon3d { margin-bottom: 16px; margin-left: -6px; }
+.pillar .icon3d-spacer { height: 56px; margin-bottom: 16px; }
 .pillar h3 { font-family: var(--heading-font); margin: 0 0 12px; color: var(--navy); font-size: 1.15rem; font-weight: 700; }
 .pillar p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
 

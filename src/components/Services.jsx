@@ -10,7 +10,7 @@ const PILLARS = [
     body: '合格者の実体験に基づいた、遠回りしない学習設計。毎週の演習結果をもとに、次の一週間の優先順位を明確にします。',
   },
   {
-    shape: 'octahedron',
+    shape: null,
     title: 'AIを活用した個別最適化',
     body: '週次の演習結果をAIが分析し、翌週の学習プラン案を自動生成。内容は必ず監修者が確認・調整してからお届けします。',
   },
@@ -43,7 +43,7 @@ export function Services() {
         >
           {PILLARS.map((pillar) => (
             <Tilt className="pillar" key={pillar.title} variants={staggerItem}>
-              <Icon3D shape={pillar.shape} />
+              {pillar.shape ? <Icon3D shape={pillar.shape} /> : <div className="icon3d-spacer" />}
               <h3>{pillar.title}</h3>
               <p>{pillar.body}</p>
             </Tilt>
