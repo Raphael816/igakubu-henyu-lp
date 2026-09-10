@@ -21,9 +21,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          独学の医学部編入対策、
+          独学の迷いを、
           <br />
-          その情報、本当に合っていますか？
+          毎週の合格戦略に。
         </motion.h1>
         <motion.p
           className="sub"
@@ -31,9 +31,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          合格者監修 × AIを使った、効率重視の医学部編入サポート。
+          合格者とAIが、志望校から逆算した学習計画を毎週作成。
           <br />
-          オンライン完結・個別対応で、あなたの学習を伴走します。
+          何をすべきか迷わない、オンライン完結の伴走サポートです。
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

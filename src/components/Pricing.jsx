@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { LINE_URL } from '../constants'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
 import { Tilt } from './Tilt'
 
@@ -74,6 +75,14 @@ export function Pricing() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              <motion.a
+                className="btn btn-line pricing-card-cta"
+                href={LINE_URL}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                このコースについて相談する
+              </motion.a>
             </Tilt>
           ))}
         </motion.div>

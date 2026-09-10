@@ -104,7 +104,7 @@ header.site-header .wrap {
   .btn-header .short { display: inline; }
 }
 .btn-line {
-  background: #06c755;
+  background: #037840;
   color: #fff;
 }
 
@@ -284,6 +284,23 @@ p.section-lede {
   border-radius: 999px;
   padding: 3px 12px;
 }
+.upcoming-note {
+  max-width: 560px;
+  margin: 40px auto 0;
+  text-align: center;
+  padding: 20px 24px;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+}
+.upcoming-note-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+.upcoming-note ul { list-style: none; padding: 0; margin: 0; }
+.upcoming-note li { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 4px; }
 
 /* ---------- How it works ---------- */
 .steps {
@@ -353,9 +370,10 @@ p.section-lede {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
-  background: var(--navy-deep);
+  background: var(--card-bg);
+  padding: 4px;
 }
-.sample-shot { display: block; width: 100%; height: auto; }
+.sample-shot { display: block; width: 100%; height: auto; border-radius: 16px; }
 
 /* ---------- Mentor ---------- */
 .mentor {
@@ -464,6 +482,15 @@ p.section-lede {
   color: var(--gold);
   font-weight: 700;
 }
+.pricing-card-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 13px 16px;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
 /* ---------- FAQ ---------- */
 .faq { max-width: var(--content-width); margin: 0 auto; }
 .faq-item { border-bottom: 1px solid var(--border); }
@@ -509,7 +536,7 @@ p.section-lede {
 .cta-final-content { position: relative; z-index: 1; }
 .cta-final h2 { font-family: var(--heading-font); color: #fff; margin: 0 0 16px; font-size: clamp(1.5rem, 3vw, 1.9rem); }
 .cta-final p { color: #cfd6e6; margin: 0 0 32px; }
-.cta-final .btn-line { background: #06c755; color: #fff; }
+.cta-final .btn-line { background: #037840; color: #fff; }
 
 /* ---------- Footer ---------- */
 footer {
@@ -546,4 +573,12 @@ footer .copyright {
   .mentor .avatar { margin: 0 auto; }
   section { padding: 72px 0; }
   .hero { padding: 96px 0 64px; }
+}
+@media (max-width: 480px) {
+  section { padding: 52px 0; }
+  #how-it-works, #ai-safety { padding: 40px 0; }
+  .steps, .ai-steps { gap: 14px; }
+  .step, .ai-step { padding: 20px 18px; }
+  p.section-lede { margin-bottom: 32px; }
+  .sample-shot-frame { max-width: none; margin: 0 -32px; border-radius: 0; }
 }
