@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Reveal } from './Reveal'
 
+// TODO: 実際によく聞かれる質問があれば差し替える
 const FAQS = [
   {
     q: 'オンラインだけで本当に対策できますか？',
@@ -63,9 +64,6 @@ export function FAQ() {
             <FaqItem key={item.q} {...item} />
           ))}
         </div>
-        <p style={{ textAlign: 'center', marginTop: 20 }}>
-          <span className="placeholder-note">TODO: 実際によく聞かれる質問に差し替えてください</span>
-        </p>
       </div>
     </section>
   )

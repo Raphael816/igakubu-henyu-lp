@@ -9,6 +9,7 @@ export function Header() {
           MEDTHOD <span>SCHOOL</span>
         </div>
         <nav className="site-nav">
+          <a href="#how-it-works">流れ</a>
           <a href="#services">サービス内容</a>
           <a href="#features">機能</a>
           <a href="#mentor">監修者紹介</a>
@@ -21,7 +22,8 @@ export function Header() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.96 }}
         >
-          LINEで無料相談する
+          <span className="full">LINEで無料相談する</span>
+          <span className="short">無料相談</span>
         </motion.a>
       </div>
     </header>

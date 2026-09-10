@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
 import { Tilt } from './Tilt'
 
+// TODO: X(旧Twitter)の編入クラスタでのヒアリングで集めた「生の言葉」があれば差し替える
 const PAINS = [
   '何から手をつければいいか分からない',
   '独学だと、自分のやり方が正しいのか不安',
@@ -36,11 +37,6 @@ export function PainPoints() {
             </Tilt>
           ))}
         </motion.ul>
-        <p style={{ textAlign: 'center', marginTop: 20 }}>
-          <span className="placeholder-note">
-            TODO: この一覧はたたき台です。X(旧Twitter)の編入クラスタでのヒアリングで集めた「生の言葉」に差し替えてください
-          </span>
-        </p>
       </div>
     </section>
   )

@@ -2,7 +2,10 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Achievements } from './components/Achievements'
 import { PainPoints } from './components/PainPoints'
+import { HowItWorks } from './components/HowItWorks'
+import { AIExplainer } from './components/AIExplainer'
 import { Services } from './components/Services'
+import { SamplePlan } from './components/SamplePlan'
 import { Features } from './components/Features'
 import { Mentor } from './components/Mentor'
 import { Pricing } from './components/Pricing'
@@ -17,7 +20,10 @@ function App() {
       <Hero />
       <Achievements />
       <PainPoints />
+      <HowItWorks />
+      <AIExplainer />
       <Services />
+      <SamplePlan />
       <Features />
       <Mentor />
       <Pricing />
