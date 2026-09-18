@@ -1,41 +1,8 @@
 import { motion } from 'framer-motion'
-import { LINE_URL } from '../constants'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
 import { Tilt } from './Tilt'
-
-// TODO: 期間・金額・面談回数は叩き台。運営側で正式な条件が決まり次第、数字を差し替える。
-const INCLUDED = [
-  '週1回、演習結果をもとにしたAI学習プランの作成・監修者確認',
-  '月2回のオンライン面談',
-  '成績管理・単元登録・教材の利用',
-]
-
-const PLANS = [
-  {
-    name: '1ヶ月コース',
-    months: 1,
-    total: 60000,
-    monthly: 60000,
-    tag: 'お試し',
-    highlight: false,
-  },
-  {
-    name: '3ヶ月コース',
-    months: 3,
-    total: 150000,
-    monthly: 50000,
-    tag: 'おすすめ',
-    highlight: true,
-  },
-  {
-    name: '6ヶ月コース',
-    months: 6,
-    total: 270000,
-    monthly: 45000,
-    tag: '一番お得',
-    highlight: false,
-  },
-]
+import { LineCta } from './CtaLink'
+import { PRICING_PLANS, PRICING_INCLUDED, UNDETERMINED_TERMS } from '../data/content'
 
 export function Pricing() {
   return (
@@ -48,8 +15,20 @@ export function Pricing() {
           料金について
         </Reveal>
         <Reveal as="p" className="section-lede" delay={0.1}>
-          合格者監修 × AIによる週次カリキュラム作成を、月々の伴走でご提供します。期間に応じて3つのコースをご用意しています。
+          月額料金は、授業1時間の対価ではなく、授業外の学習管理を含めた「合格までの個別管理費用」です。
+          <br />
+          結果や合格を保証するものではありません。
         </Reveal>
+
+        <Reveal delay={0.1} className="included-box">
+          <p className="included-box-title">料金に含まれる支援</p>
+          <ul className="included-box-list">
+            {PRICING_INCLUDED.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </Reveal>
+
         <motion.div
           className="pillars pricing-plans"
           variants={staggerContainer}
@@ -57,37 +36,36 @@ export function Pricing() {
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {PLANS.map((plan) => (
+          {PRICING_PLANS.map((plan) => (
             <Tilt
               className={`pricing-card${plan.highlight ? ' pricing-card-highlight' : ''}`}
-              key={plan.name}
+              key={plan.id}
               variants={staggerItem}
             >
-              <span className="tag">{plan.tag}</span>
+              {plan.tag && <span className="tag">{plan.tag}</span>}
               <h3 className="pricing-plan-name">{plan.name}</h3>
               <div className="price">
-                {plan.total.toLocaleString()}
-                <small>円(総額・税込)</small>
+                {plan.price.toLocaleString()}
+                <small>円/月(税込)</small>
               </div>
-              <p className="pricing-monthly">月あたり {plan.monthly.toLocaleString()}円換算</p>
               <ul className="pricing-included">
-                {INCLUDED.map((item) => (
+                {plan.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <motion.a
-                className="btn btn-line pricing-card-cta"
-                href={LINE_URL}
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                このコースについて相談する
-              </motion.a>
+              <LineCta ctaId={plan.ctaId} label="このプランについて相談する" className="pricing-card-cta" />
             </Tilt>
           ))}
         </motion.div>
-        <Reveal as="p" className="pricing-footnote" delay={0.2}>
-          お支払い方法・解約条件の詳細は、無料相談でご案内します。
+
+        <Reveal delay={0.2} className="pricing-footnote-box">
+          <p className="pricing-footnote-title">現時点で確定していない項目</p>
+          <p>以下は事業計画の段階では確定していないため、詳細は無料相談でご案内します。</p>
+          <ul>
+            {UNDETERMINED_TERMS.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </Reveal>
       </div>
     </section>

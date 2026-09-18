@@ -1,31 +1,31 @@
 import { motion } from 'framer-motion'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
 import { Tilt } from './Tilt'
-import { PAINS } from '../data/content'
+import { TEACHING_FEATURES } from '../data/content'
 
-export function PainPoints() {
+export function TeachingFeatures() {
   return (
-    <section id="pains" className="alt">
+    <section id="teaching">
       <div className="wrap">
         <Reveal as="span" className="eyebrow-label">
-          CONCERNS
+          TEACHING
         </Reveal>
         <Reveal as="h2" className="section-title">
-          医学部編入で起こる問題
+          指導の特徴
         </Reveal>
         <Reveal as="p" className="section-lede" delay={0.1}>
-          独学で医学部学士編入を目指す方から、よくいただくお悩みです。
+          「個別管理量の多さ」で、遠回りを減らします。
         </Reveal>
         <motion.ul
-          className="pain-list"
+          className="pain-list teaching-list"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {PAINS.map((pain) => (
-            <Tilt as="li" key={pain} variants={staggerItem}>
-              {pain}
+          {TEACHING_FEATURES.map((item) => (
+            <Tilt as="li" key={item} variants={staggerItem}>
+              {item}
             </Tilt>
           ))}
         </motion.ul>

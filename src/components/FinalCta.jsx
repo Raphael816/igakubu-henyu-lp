@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion'
 import { Reveal } from './Reveal'
-import { LINE_URL } from '../constants'
+import { LineCta } from './CtaLink'
 import { Scene3D } from './Scene3D'
 
 export function FinalCta() {
@@ -11,15 +10,10 @@ export function FinalCta() {
           <Scene3D />
           <div className="cta-final-content">
             <h2>まずは無料相談から</h2>
-            <p>現在の状況やお悩み、志望校についてお伺いします。無理な勧誘は一切いたしません。</p>
-            <motion.a
-              className="btn btn-line"
-              href={LINE_URL}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
-            >
-              LINEで無料相談する
-            </motion.a>
+            <p>
+              現在の学力・志望校・お悩みをお伺いし、簡単な学習の方向性をご提案します。無理な勧誘は一切いたしません。
+            </p>
+            <LineCta ctaId="line_final" />
           </div>
         </Reveal>
       </div>

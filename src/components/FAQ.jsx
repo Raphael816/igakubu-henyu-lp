@@ -1,38 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Reveal } from './Reveal'
+import { LineCta } from './CtaLink'
+import { FAQS } from '../data/content'
 
-// TODO: 実際によく聞かれる質問・正式な解約規定が決まったら差し替える
-const FAQS = [
-  {
-    q: 'オンラインだけで本当に対策できますか？',
-    a: 'はい。学習プランの提供から個別相談まで、すべてオンラインで完結する設計にしています。',
-  },
-  {
-    q: 'どんな人におすすめですか？',
-    a: '仕事や学業を続けながら受験する方、文系出身で生命科学に不安がある方、独学で学習計画の管理に困っている方など、特に「何を・いつやるか」を一緒に整理してほしい方におすすめです。',
-  },
-  {
-    q: 'コース・料金はどうなっていますか？',
-    a: '1ヶ月・3ヶ月・6ヶ月の3コースからお選びいただけます(3ヶ月コースがおすすめ)。詳細は料金セクションをご覧ください。',
-  },
-  {
-    q: '途中で解約・休会はできますか？',
-    a: '契約開始から7日以内は全額返金いたします。それ以降の解約・休会・コース変更については、無料相談時にご案内します。',
-  },
-  {
-    q: '無料相談はどんな内容ですか？',
-    a: 'LINEで現在の状況を送っていただいたうえで日程調整し、オンラインで30分程度お話しします。相談だけで終了していただいても構いません。契約は必須ではありません。',
-  },
-  {
-    q: '講師は誰が担当しますか？',
-    a: '合格者による監修と、AIを活用した学習プラン作成を組み合わせてサポートします。',
-  },
-  {
-    q: '学習データはどのように扱われますか？',
-    a: '演習結果・志望校などの情報は、学習プラン作成のためだけに使用します。プラン文章の生成には外部のAIサービス(Anthropic社のClaude)を利用しており、保管はSupabase社のデータベース上で行っています。退会時のデータ削除については無料相談・お問い合わせ時にご案内します。',
-  },
-]
+function setJsonLd(id, data) {
+  let el = document.getElementById(id)
+  if (!el) {
+    el = document.createElement('script')
+    el.id = id
+    el.type = 'application/ld+json'
+    document.head.appendChild(el)
+  }
+  el.textContent = JSON.stringify(data)
+}
 
 function FaqItem({ q, a }) {
   const [open, setOpen] = useState(false)
@@ -61,7 +42,20 @@ function FaqItem({ q, a }) {
   )
 }
 
-export function FAQ() {
+export function FAQ({ items = FAQS, withJsonLd = true, withCta = false }) {
+  useEffect(() => {
+    if (!withJsonLd) return
+    setJsonLd('faq-jsonld', {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: items.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    })
+  }, [items, withJsonLd])
+
   return (
     <section id="faq" className="alt">
       <div className="wrap">
@@ -72,10 +66,15 @@ export function FAQ() {
           よくある質問
         </Reveal>
         <div className="faq">
-          {FAQS.map((item) => (
+          {items.map((item) => (
             <FaqItem key={item.q} {...item} />
           ))}
         </div>
+        {withCta && (
+          <Reveal delay={0.1} className="faq-cta-row">
+            <LineCta ctaId="line_faq" label="LINEで無料相談する" />
+          </Reveal>
+        )}
       </div>
     </section>
   )

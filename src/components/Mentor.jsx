@@ -1,7 +1,6 @@
+import { Link } from 'react-router-dom'
 import { Reveal } from './Reveal'
 import { Tilt } from './Tilt'
-
-// TODO: 実名・合格大学・合格年度・経歴が届き次第、本文とプロフィール写真を差し替える(本人の公開承諾は取得済み)
 
 export function Mentor() {
   return (
@@ -11,21 +10,19 @@ export function Mentor() {
           SUPERVISOR
         </Reveal>
         <Reveal as="h2" className="section-title">
-          監修者紹介
+          指導方針
         </Reveal>
         <Reveal delay={0.1}>
           <Tilt className="mentor">
-            <div className="avatar">
-              プロフィール
-              <br />
-              写真準備中
-            </div>
             <div>
-              <h3>監修者(医学部学士編入 合格者)</h3>
+              <h3>医学部学士編入試験の合格者による監修</h3>
               <p>
-                医学部学士編入試験に合格し、現在は医学部に在籍。自身の受験経験をもとに、遠回りしない学習設計を監修しています。
+                医学部学士編入試験に合格し、現在は医学部に在籍する監修者が、自身の受験経験をもとに学習の設計方針を監修しています。
+                AIが作成する学習プラン案は、必ずこの監修者・講師が確認してから生徒にお届けします。
               </p>
-              <span className="feature-badge">プロフィール準備中</span>
+              <Link to="/instructors" className="btn btn-outline btn-sm">
+                指導方針・講師の採用基準を見る
+              </Link>
             </div>
           </Tilt>
         </Reveal>

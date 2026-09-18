@@ -2,11 +2,7 @@ import { motion } from 'framer-motion'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
 import { Tilt } from './Tilt'
 
-const STEPS = [
-  { label: 'AIが下書きを作成', body: '演習結果・志望校・過去のプランをもとに、AIが翌週のプラン案を作成します。' },
-  { label: '監修者が確認・調整', body: '合格者による監修者が内容を確認し、必要に応じて修正します。' },
-  { label: '生徒に公開', body: '確認・確定したプランだけが生徒に表示されます。AIの下書きがそのまま公開されることはありません。' },
-]
+const AI_ROLES = ['学習データの整理', '成績・弱点分析', '週次計画案の作成', '復習候補の抽出', '問題生成の補助']
 
 export function AIExplainer() {
   return (
@@ -16,27 +12,26 @@ export function AIExplainer() {
           AI &amp; SAFETY
         </Reveal>
         <Reveal as="h2" className="section-title">
-          AIの役割と安全性
+          AIと講師の役割分担
         </Reveal>
         <Reveal as="p" className="section-lede" delay={0.1}>
-          AI任せにせず、必ず合格者の目で確認してから公開します。
+          MEDTHOD SCHOOLは「AIが指導する塾」ではなく、講師が指導する塾です。AIは以下の作業を支援する補助機能として利用します。
         </Reveal>
-        <motion.div
-          className="ai-steps"
+        <motion.ul
+          className="pain-list ai-role-list"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {STEPS.map((step) => (
-            <Tilt className="ai-step" key={step.label} variants={staggerItem}>
-              <div className="ai-step-label">{step.label}</div>
-              <p>{step.body}</p>
+          {AI_ROLES.map((role) => (
+            <Tilt as="li" key={role} variants={staggerItem}>
+              {role}
             </Tilt>
           ))}
-        </motion.div>
+        </motion.ul>
         <Reveal delay={0.2} as="p" className="ai-note">
-          演習結果・志望校などの学習データは、プラン作成のためだけに利用します。
+          AIが作成した週次計画案・分析結果は、そのまま生徒に公開しません。必ず講師または監修者が内容を確認・調整してからお届けします。
         </Reveal>
       </div>
     </section>

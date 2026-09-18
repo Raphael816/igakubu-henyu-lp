@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raphael816.github.io/igakubu-henyu-lp/sitemap.xml

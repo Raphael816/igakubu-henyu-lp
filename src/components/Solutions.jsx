@@ -1,32 +1,36 @@
 import { motion } from 'framer-motion'
+import { Icon3D } from './Icon3D'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
 import { Tilt } from './Tilt'
-import { SERVICES } from '../data/content'
+import { SOLUTION_PILLARS } from '../data/content'
 
-export function Services() {
+const SHAPES = ['icosahedron', 'tetrahedron', 'octahedron']
+
+export function Solutions() {
   return (
-    <section id="services">
+    <section id="solutions">
       <div className="wrap">
         <Reveal as="span" className="eyebrow-label">
-          SERVICES
+          OUR APPROACH
         </Reveal>
         <Reveal as="h2" className="section-title">
-          サービス内容
+          MEDTHOD SCHOOLの解決方法
         </Reveal>
         <Reveal as="p" className="section-lede" delay={0.1}>
-          授業だけでなく、合格までの学習全体を管理します。
+          「個別指導」「学習管理」「志望校戦略」の3本柱で、遠回りを減らします。
         </Reveal>
         <motion.div
-          className="service-grid"
+          className="pillars"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {SERVICES.map((service) => (
-            <Tilt className="service-card" key={service.title} variants={staggerItem}>
-              <h3>{service.title}</h3>
-              <p>{service.body}</p>
+          {SOLUTION_PILLARS.map((pillar, i) => (
+            <Tilt className="pillar" key={pillar.title} variants={staggerItem}>
+              <Icon3D shape={SHAPES[i]} />
+              <h3>{pillar.title}</h3>
+              <p>{pillar.body}</p>
             </Tilt>
           ))}
         </motion.div>
