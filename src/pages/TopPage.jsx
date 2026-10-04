@@ -4,6 +4,7 @@ import { Solutions } from '../components/Solutions'
 import { Services } from '../components/Services'
 import { InlineCtaBanner } from '../components/InlineCtaBanner'
 import { HowItWorks } from '../components/HowItWorks'
+import { LearningStages } from '../components/LearningStages'
 import { PortalPreview } from '../components/PortalPreview'
 import { TeachingFeatures } from '../components/TeachingFeatures'
 import { ComparisonTable } from '../components/ComparisonTable'
@@ -31,6 +32,7 @@ export function TopPage() {
       <Services />
       <InlineCtaBanner ctaId="line_service" text="サービス内容について、詳しく相談してみませんか？" />
       <HowItWorks />
+      <LearningStages />
       <PortalPreview />
       <InlineCtaBanner ctaId="line_student_portal" text="生徒ページの使い方や登録方法は、無料相談でご案内します。" />
       <TeachingFeatures />

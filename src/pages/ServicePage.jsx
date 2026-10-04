@@ -2,6 +2,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs'
 import { Solutions } from '../components/Solutions'
 import { Services } from '../components/Services'
 import { HowItWorks } from '../components/HowItWorks'
+import { LearningStages } from '../components/LearningStages'
 import { TeachingFeatures } from '../components/TeachingFeatures'
 import { ComparisonTable } from '../components/ComparisonTable'
 import { FinalCta } from '../components/FinalCta'
@@ -27,6 +28,7 @@ export function ServicePage() {
       <Solutions />
       <Services />
       <HowItWorks />
+      <LearningStages />
       <TeachingFeatures />
       <ComparisonTable />
       <FinalCta />
