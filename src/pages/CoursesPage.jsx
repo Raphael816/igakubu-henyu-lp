@@ -16,7 +16,7 @@ export function CoursesPage() {
   usePageMeta({
     title: 'コース・料金',
     description:
-      'MEDTHOD SCHOOLの月額プランは3種類。スタンダード98,000円、プレミアム148,000円、合格伴走198,000円(すべて税込)。料金に含まれる支援内容を詳しく紹介します。',
+      'MEDTHOD SCHOOLの月額プランは3種類。ベーシック39,800円、プレミアム98,000円、完全伴走198,000円(すべて税込)。料金に含まれる支援内容を詳しく紹介します。',
     path: '/courses',
   })
 

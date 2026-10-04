@@ -2,7 +2,14 @@ import { motion } from 'framer-motion'
 import { Reveal, staggerContainer, staggerItem } from './Reveal'
 import { Tilt } from './Tilt'
 import { LineCta } from './CtaLink'
-import { PRICING_PLANS, PRICING_INCLUDED, UNDETERMINED_TERMS } from '../data/content'
+import {
+  PRICING_PLANS,
+  PRICING_INCLUDED,
+  UNDETERMINED_TERMS,
+  ENROLLMENT_FEE,
+  MONITOR_PRICING,
+  CONTRACT_TERMS,
+} from '../data/content'
 
 export function Pricing() {
   return (
@@ -57,6 +64,35 @@ export function Pricing() {
             </Tilt>
           ))}
         </motion.div>
+
+        <Reveal delay={0.15} className="pricing-note">
+          上記のほか、入会金として{ENROLLMENT_FEE.toLocaleString()}円(税込・初回のみ)がかかります。
+        </Reveal>
+
+        <Reveal delay={0.15} className="pricing-footnote-box pricing-confirmed-box">
+          <p className="pricing-footnote-title">ご契約にあたって確定している内容</p>
+          <ul>
+            {CONTRACT_TERMS.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </Reveal>
+
+        <Reveal delay={0.18} className="pricing-footnote-box pricing-confirmed-box">
+          <p className="pricing-footnote-title">モニター価格(各プラン先着5名様限定)</p>
+          <ul className="monitor-pricing-list">
+            {MONITOR_PRICING.map((m) => {
+              const plan = PRICING_PLANS.find((p) => p.id === m.planId)
+              if (!plan) return null
+              return (
+                <li key={m.planId}>
+                  {plan.name}: {m.price.toLocaleString()}円/月(通常{plan.price.toLocaleString()}円)
+                </li>
+              )
+            })}
+          </ul>
+          <p className="pricing-note-small">利用期間終了後のフィードバックにご協力いただける方が対象です。通常価格への移行は2ヶ月前にご案内します。</p>
+        </Reveal>
 
         <Reveal delay={0.2} className="pricing-footnote-box">
           <p className="pricing-footnote-title">現時点で確定していない項目</p>
