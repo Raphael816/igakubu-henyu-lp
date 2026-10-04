@@ -94,15 +94,17 @@ export function Pricing() {
           <p className="pricing-note-small">利用期間終了後のフィードバックにご協力いただける方が対象です。通常価格への移行は2ヶ月前にご案内します。</p>
         </Reveal>
 
-        <Reveal delay={0.2} className="pricing-footnote-box">
-          <p className="pricing-footnote-title">現時点で確定していない項目</p>
-          <p>以下は事業計画の段階では確定していないため、詳細は無料相談でご案内します。</p>
-          <ul>
-            {UNDETERMINED_TERMS.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </Reveal>
+        {UNDETERMINED_TERMS.length > 0 && (
+          <Reveal delay={0.2} className="pricing-footnote-box">
+            <p className="pricing-footnote-title">現時点で確定していない項目</p>
+            <p>以下は事業計画の段階では確定していないため、詳細は無料相談でご案内します。</p>
+            <ul>
+              {UNDETERMINED_TERMS.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </Reveal>
+        )}
       </div>
     </section>
   )
