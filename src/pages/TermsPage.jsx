@@ -18,10 +18,6 @@ export function TermsPage() {
       </div>
       <section>
         <div className="wrap prose">
-          <div className="legal-todo">
-            公開前に専門家の確認を受けることを推奨します。
-          </div>
-
           <h2>第1条(適用)</h2>
           <p>本規約は、MEDTHOD SCHOOL(以下「本サービス」)の利用条件を定めるものです。</p>
 

@@ -2,8 +2,8 @@ import { Breadcrumbs } from '../components/Breadcrumbs'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 const ROWS = [
-  ['販売業者', '株式会社RODDIA'],
-  ['運営責任者', '佐久間太一'],
+  ['販売業者', '本公開までは非公開とします(開示請求があった場合は遅滞なく開示します)。'],
+  ['運営責任者', '本公開までは非公開とします(開示請求があった場合は遅滞なく開示します)。'],
   ['所在地', 'ご請求をいただいた場合に、遅滞なく開示いたします。'],
   ['電話番号', 'ご請求をいただいた場合に、遅滞なく開示いたします。'],
   ['メールアドレス・お問い合わせ', 'LINE公式アカウントでの受付を予定(URL: 無料相談ページ参照)。メール窓口の要否は運営者が決定。'],
@@ -45,9 +45,6 @@ export function CommercialLawPage() {
       </div>
       <section>
         <div className="wrap">
-          <div className="legal-todo">
-            月額料金を伴うオンラインサービスの表示として、公開前に弁護士など専門家の確認を受けることを推奨します。
-          </div>
           <div className="table-wrap">
             <table className="legal-table">
               <tbody>

@@ -707,17 +707,6 @@ p.section-lede {
 .prose li { margin-bottom: 6px; }
 
 /* ---------- Legal pages ---------- */
-.legal-todo {
-  background: #fbf1de;
-  border: 1px solid #eddcb5;
-  color: #7a5a1f;
-  border-radius: 14px;
-  padding: 18px 22px;
-  font-size: 0.86rem;
-  max-width: var(--content-width);
-  margin: 0 auto 36px;
-  line-height: 1.8;
-}
 .legal-table { width: 100%; max-width: var(--content-width); margin: 0 auto; border-collapse: collapse; }
 .legal-table th, .legal-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--border); font-size: 0.88rem; vertical-align: top; }
 .legal-table th { width: 34%; color: var(--navy); font-weight: 700; background: #fbf9f4; }
