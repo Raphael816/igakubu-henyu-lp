@@ -2,20 +2,24 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import { LineCta } from './CtaLink'
+import { useSitePages } from '../context/SitePagesContext'
 
-const NAV = [
+const ALL_NAV = [
   { to: '/service', label: 'サービス内容' },
   { to: '/features', label: '生徒ページ' },
   { to: '/courses', label: '料金' },
   { to: '/instructors', label: '指導方針' },
   { to: '/universities', label: '大学情報' },
   { to: '/column', label: '学習コラム' },
+  { to: '/careers', label: '採用情報' },
   { to: '/faq', label: 'よくある質問' },
 ]
 
 export function Header() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
+  const { isVisible } = useSitePages()
+  const NAV = ALL_NAV.filter((item) => isVisible(item.to))
 
   return (
     <header className="site-header">
